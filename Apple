@@ -1,0 +1,46 @@
+    LDA TEN
+        STA C
+        LDA ZERO
+        STA SUM
+        STA ANS
+INPUT   INP
+        STA N
+        ADD SUM
+        STA SUM
+        LDA C
+        SUB ONE
+        STA C
+        BRZ DIVISION
+        BRA INPUT
+DIVISION LDA SUM
+        BRZ END
+        BRP LOOP
+        ADD TEN
+        STA SUM
+        LDA ANS
+        SUB ONE
+        STA ANS
+        BRA DIVISION
+LOOP    SUB TEN
+        STA SUM
+        LDA ANS
+        ADD ONE
+        STA ANS 
+        LDA SUM
+        BRP DIVISION 
+        ADD FIVE
+        STA SUM
+        BRP END
+        LDA ANS
+        SUB ONE
+        STA ANS
+END     LDA ANS
+        OUT
+        HLT
+TEN     DAT 10
+ZERO    DAT 0
+ONE     DAT 1
+FIVE    DAT 5
+ANS     DAT
+SUM     DAT
+C       DAT
