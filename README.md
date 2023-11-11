@@ -1,3 +1,5 @@
 # Average-Calculator-
 
-Find the average of 10 numbers inputted one at a time. 
+This code runs on the Little Man Computer, a beginner Assembly programming platform. 
+
+The user will input 10 numbers one at a time. The program will output the average of the 10 numbers. 
